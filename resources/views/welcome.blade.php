@@ -3,8 +3,8 @@
 @section('content')
     <h2>Bienvenue sur le site de {{ $name }} !</h2>
     @foreach ($titles as $title)
-    <li>
+    <x-article :title="$title['title']" :desc="$title['desc']">
         {{ $title['title'] }} : {{ $title['desc'] }}
-    </li>
+    </x-article>
     @endforeach
 @endsection
