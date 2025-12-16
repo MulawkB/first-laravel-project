@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('hotbar', config('app.name'))
-@section('title', 'Détails de l\'article ' . $id)
+@section('title')
 @section('content')
+    <h2>Article portant l’identifiant {{ $id }}</h2>
 @endsection
