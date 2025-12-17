@@ -12,6 +12,6 @@ class IndexController extends Controller
         ["title" => "Villes vertes", "desc" => "Les métropoles deviennent plus écologiques et durables."],
         ["title" => "Télétravail", "desc" => "Plus de liberté, mais aussi plus de solitude."]
     ];
-        return view('welcome', ["name" => "Brian" , "titles" => $articles]);
+        return view('welcome', ["name" => "Brian" , "articles" => $articles]);
     }
 }
