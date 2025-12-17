@@ -1,11 +1,9 @@
 <!-- resources/views/layouts/app.blade.php -->
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<link rel="stylesheet" href="{{ asset('resources/css/app.css') }}">
-<link rel="stylesheet" href="{{ asset('resources/js/app.js') }}">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="{{ asset('favicon.png') }}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.png') }}">
     <title>@yield('title')</title>
 </head>
 <body>
