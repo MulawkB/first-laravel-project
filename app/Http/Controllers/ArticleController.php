@@ -29,7 +29,6 @@ class ArticleController extends Controller
     }
     public function update($id)
     {
-        Article::find($id);
         if (!Article::find($id)) {
             return 'Article avec id ' . $id . ' non trouvé donc non modifiable';
         }
