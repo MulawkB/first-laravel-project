@@ -6,6 +6,7 @@
     @if ($loop->last)
         @break
     @endif
+    <a href="{{ route('article.show', ['id' => $article['id']]) }}">
     <x-article :title="$article['title']" :desc="$article['desc']"/>
     @endforeach
 @endsection

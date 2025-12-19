@@ -1,17 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Article;
 class IndexController extends Controller
 {
-
     public function index()
     {
-    $articles = [
-        ["title" => "L’IA soigne mieux", "desc" => "L’intelligence artificielle aide les médecins à diagnostiquer plus vite."],
-        ["title" => "Villes vertes", "desc" => "Les métropoles deviennent plus écologiques et durables."],
-        ["title" => "Télétravail", "desc" => "Plus de liberté, mais aussi plus de solitude."]
-    ];
+        $articles = Article::all();
         return view('welcome', ["name" => "Brian" , "articles" => $articles]);
     }
 }
