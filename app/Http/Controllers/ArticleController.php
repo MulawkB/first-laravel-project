@@ -29,20 +29,22 @@ class ArticleController extends Controller
     }
     public function update($id)
     {
-        if (!Article::find($id)) {
+        $article = Article::find($id);
+        if (!$article) {
             return 'Article avec id ' . $id . ' non trouvé donc non modifiable';
         }
-        Article::where('id', $id)->update([
+        $article->update([
             'title' => 'Titre Modifié',
         ]);
         return "Article " . $id . " mis à jour avec succès.";
     }
     public function delete($id)
     {
-        if (!Article::find($id)) {
+        $article = Article::find($id);
+        if (!$article) {
             return 'Article avec id ' . $id . ' non trouvé ou déja supprimé';
         }
-        Article::destroy($id);
+        $article->delete();
         return "Article " . $id . " supprimé avec succès.";
     }
 }
